@@ -176,7 +176,14 @@ public static void main (String[] args){
     bankAcct[0].withdraw(100.00f);
     bankAcct[0].showAccount();
 
+
+    FixedDepositAccount fredFD = new FixedDepositAccount("Fred", "001-002-003", 30000.00f, 10.0f, 1);
+    fredFD.deposit(2000.00f);
+    fredFD.withdraw(1000.00f);
+    float computedBalance = fredFD.getBalance();
+    System.out.println(fredFD.getAccountNumber() + "- " + fredFD.getFullName() + "----> Balance: " + computedBalance);
 }
+
 
 
 }
